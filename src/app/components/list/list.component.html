@@ -1,0 +1,25 @@
+<div class = "container">
+    <h1>PhoneBook</h1>
+    <!-- <button type = "submit" class = "btn btn-primary float-end">Add</button> -->
+    <a routerLink="/api/add" class = "btn btn-primary float-end">New Contact</a>
+      <table class = "table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor = "let contact of contacts">
+            <td>{{contact.id}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.phone}}</td>
+            <td>
+                <a routerLink = "/api/update/{{contact.id}}" class = "btn btn-info">Update</a>
+                <a class = "btn btn-info" (click)="deleteContact(contact.id)">Delete</a>
+            </td>
+        </tr>
+         
+      </table>
+</div>
+
+

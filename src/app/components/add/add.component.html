@@ -1,0 +1,14 @@
+<div class = "container">
+    <h1>Add Contact</h1>
+    <div class="mb-3">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" [(ngModel)]="model.name">
+      </div>
+      <div class="mb-3">
+        <label for="Number" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" id="number" rows="3" placeholder="Enter your contact Details"  [(ngModel)]="model.phone">
+      </div>
+      <div class="mb-3">
+        <input type = "submit" class = "btn btn-primary" (click)="addContact(model)" value = "Add Contact">
+      </div>
+</div>
